@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7b3b332c9f.js" crossorigin="anonymous"></script> -->
+
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="overlay">
+            <div class="menu">
+                <div class="backBtn "><img src="./images/left.svg" alt="backBtn"></div>
+                
+                <div class="menu-item">
+                    <ul>
+                        <li> <span ><img class="icons" src="./images/weather.svg" alt="search-btn"></span>Dark Mode</li>
+                        <li><span ><img class="icons" src="./images/temperature.svg" alt="search-btn"></span>Weather Unit</li>
+                        <li><span ><img class="icons" src="./images/settings.svg" alt="search-btn"></span>Setting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="search-div">
+            
+
+            <div class="ham-menu">
+                <img src="./images/menu.svg" class="icons" alt="">
+            </div>
+            <form id="form">
+                <input type="text" class="text-input" id="input-text">
+            </form>
+
+            <div class="action-btn">
+                <span class="search-btn"><img class="icons" src="./images/loupe.svg" alt="search-btn"></span>
+                <span class="clear-btn icons">clear</span>
+            </div>
+        </div>
+        <div class="days">
+            <span>TODAY</span>
+            <span>TOMORROW</span>
+            <span>10 DAYS</span>
+        </div>
+        <div class="date">
+            <span id="date">7 November,20:11</span>
+        </div>
+        <div class="max-min-temp">
+            <span>Day <span id="max-temp">32</span>  <sup>°c</sup><img src="./images/up-arrow.svg" alt=""></span>
+            <span> Night <span id="min-temp">12</span><sup>°c</sup><img src="./images/down-arrow.svg" alt=""></span>
+        </div>
+        <div class="temp-data">
+            <div class="section-one">
+                <div>
+                    <span class="current-temp">20</span><span class="c">°c</span>  
+                </div>
+                             
+                    
+              
+                <div class="feels-like-temp">Feels like <span id="feels-like-temp">20</span><sup>°c</sup></div>
+            </div>
+            <div class="section-two">
+                <div id="status-image">
+                    <img src="/images/night.svg" alt="">
+                </div>
+                <div class="temp-status" id="status">Clear</div>
+
+            </div>
+
+        </div>
+
+        <div></div>
+
+    </div>
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
