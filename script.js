@@ -17,51 +17,51 @@ const form = document.getElementById('form');
 
 
 
-const weather = async () =>{
+const weather = async () => {
 
     const cityName = inputText.value;
-    
-    if(cityName == ""){
+
+    if (cityName == "") {
         alert('type the city name');
-    }else{
-        try{
+    } else {
+        try {
             const api = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=e8b2609e592c501c762199ea9d0328fa`;
 
             const response = await fetch(api);
             const jsonData = await response.json();
             const data = [jsonData];
-        
+
             currTemp.innerText = data[0].main.temp;
-            dateSpn.innerText = new Date ();
-        
+            dateSpn.innerText = new Date();
+
             maxTemp.innerText = data[0].main.temp_max;
-            
+
             minTemp.innerText = data[0].main.temp_min;
-        
+
             feelTemp.innerText = data[0].main.feels_like;
-        
+
             const statusData = data[0].weather[0].main;
             status.innerText = statusData;
-            
-            if(statusData == "Clear"){
+
+            if (statusData == "Clear") {
                 console.log(statusData);
                 statusImg.innerHTML = `<img src="./images/sunny.svg" alt="">`
-            }else if(statusData == "Clouds"){
+            } else if (statusData == "Clouds") {
                 statusImg.innerHTML = `<img src="./images/storm.svg" alt="">`
-            }else if(statusData == "Haze"){
+            } else if (statusData == "Haze") {
                 statusImg.innerHTML = `<img src="./images/haze.svg" alt="">`
-            }else if(statusData == "Rain"){
+            } else if (statusData == "Rain") {
                 statusImg.innerHTML = `<img src="./images/umbrella.svg" alt="">`
-            }else if(statusData == "Smoke"){
+            } else if (statusData == "Smoke") {
                 statusImg.innerHTML = `<img src="./images/haze.svg" alt="">`
             }
-            
-        }catch{
+
+        } catch {
             alert('enter city name properly');
         }
     }
 
-    
+
 
 
 
@@ -71,7 +71,7 @@ const weather = async () =>{
 
 // Functions
 
-const openMenu = () =>{
+const openMenu = () => {
     overlay.classList.add('show');
     menu.classList.add('show');
 }
@@ -83,12 +83,12 @@ const closeMenu = () => {
 
 
 // Event Listners
-form.addEventListener('submit',(e)=>{
+form.addEventListener('submit', (e) => {
     e.preventDefault();
     weather();
 })
-hamBtn.addEventListener('click',openMenu);
-backBtn.addEventListener('click',closeMenu);
+hamBtn.addEventListener('click', openMenu);
+backBtn.addEventListener('click', closeMenu);
 
 
 
