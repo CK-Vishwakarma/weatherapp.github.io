@@ -25,7 +25,7 @@ const weather = async () =>{
         alert('type the city name');
     }else{
         try{
-            const api = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=e8b2609e592c501c762199ea9d0328fa`;
+            const api = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=e8b2609e592c501c762199ea9d0328fa`;
 
             const response = await fetch(api);
             const jsonData = await response.json();
