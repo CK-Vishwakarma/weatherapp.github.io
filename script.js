@@ -44,7 +44,7 @@ const weather = async () =>{
             status.innerText = statusData;
             
             if (statusData === "Clear") {
-                statusImg.innerHTML = `<img src="/images/sun.svg" alt="">`
+                statusImg.innerHTML = `<img src="/images/sun.png" alt="">`
             }else if(statusData === "Clouds"){
                 statusImg.innerHTML = `<img src="/images/storm.svg" alt="">`
             }else if(statusData === "Haze"){
